@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Login Page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+    <header><center>
+        <img src="images/1911932273.jpg" alt="">
+        </center>
+    <center>
+        <h1> Joining Form build with SAWO LABS</h1>
+        <div id="sawo-container" style="height: 300px; width: 300px;"></div>
+
+    <div class="user">
+    <form>
+        <label>Username : </label>
+        <input type="text" placeholder="Enter Username" name="username" required> <br />
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Password" name="password" required> <br />
+        <button type="submit">Login</button> <br />
+        <input type="checkbox" checked="checked"> Remember me
+        <br />
+        <button type="button" class="cancelbtn"> Cancel</button>
+        <br />
+           </form>
+    </div>
+    </center>
+    </header>
+    <script src="http://websdk.sawolabs.com/sawo.min.js"></script>
+    <script>
+        var config = {
+            // should be same as the id of the container created on 3rd step
+            containerID: "sawo-container",
+            // can be one of 'email' or 'phone_number_sms'
+            identifierType: "ishabhthakur2711@gmail.com",
+            // Add the API key copied from 2nd step
+            apiKey: "5e81ba20-244d-49a5-8727-5ffc37a4a854",
+            // Add a callback here to handle the payload sent by sdk
+            onSuccess: (payload) => {
+                console.log(payload)
+            },
+        };
+        var sawo = new Sawo(config);
+        sawo.showForm();
+    </script>
+</body>
+
+</html>
